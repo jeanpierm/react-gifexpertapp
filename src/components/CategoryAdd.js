@@ -6,10 +6,13 @@ const CategoryAdd = ({ setCategories }) => {
 
   const handleInputChange = (e) => {
     setInputValue(e.target.value);
+
+    console.log("handleInputChange called");
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    console.log("handleSubmit called", inputValue);
     if (inputValue.trim().length > 2) {
       setCategories((category) => [inputValue, ...category]);
       setInputValue("");

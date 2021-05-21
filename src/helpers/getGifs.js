@@ -4,13 +4,11 @@ const getGifs = async (category) => {
   )}&limit=10&api_key=IkhRRwVVTTHFLyaH08HWpJQ5D6KHSaHM`;
   const response = await fetch(url);
   const { data } = await response.json();
-  const gifs = data.map((img) => ({
+  return data.map((img) => ({
     id: img.id,
     title: img.title,
     url: img.images?.downsized_medium.url,
   }));
-
-  return gifs;
 };
 
 export default getGifs;

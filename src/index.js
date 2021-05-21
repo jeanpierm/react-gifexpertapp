@@ -5,7 +5,7 @@ import "./index.css";
 
 ReactDOM.render(
   <React.StrictMode>
-    <GifExpertApp />
+    <GifExpertApp categories={["Goku"]} />
   </React.StrictMode>,
   document.getElementById("root")
 );
